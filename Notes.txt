@@ -1,0 +1,420 @@
+{ ~ }  » ssh 192.168.0.10                                                                       ~
+Debian GNU/Linux 8
+
+BeagleBoard.org Debian Image 2016-05-27
+
+Support/FAQ: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0770 for '/home/fredrik/.ssh/id_rsa' are too open.
+It is recommended that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/home/fredrik/.ssh/id_rsa": bad permissions
+fredrik@192.168.0.10's password:
+Last login: Sat Jul 23 12:11:06 2016 from 192.168.0.242
+  ____  ______          _____ _      ______   ____   ____  _   _ ______
+ |  _ \|  ____|   /\   / ____| |    |  ____| |  _ \ / __ \| \ | |  ____|
+ | |_) | |__     /  \ | |  __| |    | |__    | |_) | |  | |  \| | |__
+ |  _ <|  __|   / /\ \| | |_ | |    |  __|   |  _ <| |  | | . ` |  __|
+ | |_) | |____ / ____ \ |__| | |____| |____  | |_) | |__| | |\  | |____
+ |____/|______/_/    \_\_____|______|______| |____/ \____/|_| \_|______|
+
+fredrik@beaglebone:~$ exit
+logout
+Connection to 192.168.0.10 closed.
+{ ~ }  » cd .ssh                                                                                ~
+{ .ssh }  » ls                                                                             ~/.ssh
+id_rsa  id_rsa.pub  known_hosts
+{ .ssh }  » ls -l                                                                          ~/.ssh
+total 6
+-rwxrwx---+ 1 fredrik None 1679 Jul  9 17:48 id_rsa
+-rwxrwx---+ 1 fredrik None  400 Jul  9 17:48 id_rsa.pub
+-rw-rwxr--+ 1 fredrik None  523 Jul 21 18:53 known_hosts
+{ .ssh }  » chmod 0700 id_rsa                                                              ~/.ssh
+{ .ssh }  » ssh 192.168.0.10                                                               ~/.ssh
+Debian GNU/Linux 8
+
+BeagleBoard.org Debian Image 2016-05-27
+
+Support/FAQ: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+Last login: Sat Jul 23 12:12:20 2016 from 192.168.0.242
+  ____  ______          _____ _      ______   ____   ____  _   _ ______
+ |  _ \|  ____|   /\   / ____| |    |  ____| |  _ \ / __ \| \ | |  ____|
+ | |_) | |__     /  \ | |  __| |    | |__    | |_) | |  | |  \| | |__
+ |  _ <|  __|   / /\ \| | |_ | |    |  __|   |  _ <| |  | | . ` |  __|
+ | |_) | |____ / ____ \ |__| | |____| |____  | |_) | |__| | |\  | |____
+ |____/|______/_/    \_\_____|______|______| |____/ \____/|_| \_|______|
+
+fredrik@beaglebone:~$ ls -l
+total 4
+drwxr-xr-x 2 fredrik fredrik 4096 Jul 23 12:07 gitHubTest
+fredrik@beaglebone:~$ exit
+logout
+Connection to 192.168.0.10 closed.
+{ .ssh }  » cd                                                                             ~/.ssh
+{ ~ }  » ls                                                                                     ~
+bin
+{ ~ }  » ssh 192.168.0.10                                                                       ~
+Debian GNU/Linux 8
+
+BeagleBoard.org Debian Image 2016-05-27
+
+Support/FAQ: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+Last login: Sat Jul 23 12:13:10 2016 from 192.168.0.242
+  ____  ______          _____ _      ______   ____   ____  _   _ ______
+ |  _ \|  ____|   /\   / ____| |    |  ____| |  _ \ / __ \| \ | |  ____|
+ | |_) | |__     /  \ | |  __| |    | |__    | |_) | |  | |  \| | |__
+ |  _ <|  __|   / /\ \| | |_ | |    |  __|   |  _ <| |  | | . ` |  __|
+ | |_) | |____ / ____ \ |__| | |____| |____  | |_) | |__| | |\  | |____
+ |____/|______/_/    \_\_____|______|______| |____/ \____/|_| \_|______|
+
+fredrik@beaglebone:~$ cd gitHubTest/
+fredrik@beaglebone:~/gitHubTest$ ls
+fredrik@beaglebone:~/gitHubTest$ git config
+usage: git config [options]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color <slot>    find the color configured: [default]
+    --get-colorbool <slot>
+                          find the color setting: [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+
+Other
+    -z, --null            terminate values with NUL byte
+    --includes            respect include directives on lookup
+
+fredrik@beaglebone:~/gitHubTest$ git config --get-all
+error: wrong number of arguments
+usage: git config [options]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color <slot>    find the color configured: [default]
+    --get-colorbool <slot>
+                          find the color setting: [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+
+Other
+    -z, --null            terminate values with NUL byte
+    --includes            respect include directives on lookup
+
+fredrik@beaglebone:~/gitHubTest$
+fredrik@beaglebone:~/gitHubTest$
+fredrik@beaglebone:~/gitHubTest$ git init testproject
+Initialized empty Git repository in /home/fredrik/gitHubTest/testproject/.git/
+fredrik@beaglebone:~/gitHubTest$ ls -l
+total 4
+drwxr-xr-x 3 fredrik fredrik 4096 Jul 23 12:15 testproject
+fredrik@beaglebone:~/gitHubTest$ cd testproject/
+fredrik@beaglebone:~/gitHubTest/testproject$ ls
+fredrik@beaglebone:~/gitHubTest/testproject$ touch FredsFile.txt
+fredrik@beaglebone:~/gitHubTest/testproject$ nano FredsFile.txt
+fredrik@beaglebone:~/gitHubTest/testproject$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        FredsFile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+fredrik@beaglebone:~/gitHubTest/testproject$ git add .
+fredrik@beaglebone:~/gitHubTest/testproject$ vi .gitignore
+fredrik@beaglebone:~/gitHubTest/testproject$ git ls-files --other --ignored
+fatal: ls-files --ignored needs some exclude pattern
+fredrik@beaglebone:~/gitHubTest/testproject$ git ls-files --other --ignored --exclude-standard
+fredrik@beaglebone:~/gitHubTest/testproject$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   FredsFile.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+fredrik@beaglebone:~/gitHubTest/testproject$ git add .
+fredrik@beaglebone:~/gitHubTest/testproject$ touch dummy.log
+fredrik@beaglebone:~/gitHubTest/testproject$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   .gitignore
+        new file:   FredsFile.txt
+
+fredrik@beaglebone:~/gitHubTest/testproject$ touch do_not_include.o
+fredrik@beaglebone:~/gitHubTest/testproject$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   .gitignore
+        new file:   FredsFile.txt
+
+fredrik@beaglebone:~/gitHubTest/testproject$ lls
+-bash: lls: command not found
+fredrik@beaglebone:~/gitHubTest/testproject$ lla
+total 12
+drwxr-xr-x 7 fredrik fredrik 4096 Jul 23 12:19 .git
+-rw-r--r-- 1 fredrik fredrik   17 Jul 23 12:17 .gitignore
+-rw-r--r-- 1 fredrik fredrik   17 Jul 23 12:16 FredsFile.txt
+-rw-r--r-- 1 fredrik fredrik    0 Jul 23 12:19 do_not_include.o
+-rw-r--r-- 1 fredrik fredrik    0 Jul 23 12:18 dummy.log
+fredrik@beaglebone:~/gitHubTest/testproject$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   .gitignore
+        new file:   FredsFile.txt
+
+fredrik@beaglebone:~/gitHubTest/testproject$ git commit -m "Learning GitHub 1.0"
+[master (root-commit) 36d4b11] Learning GitHub 1.0
+ Committer: Fredrik Safstrom <fredrik@beaglebone.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 5 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 FredsFile.txt
+fredrik@beaglebone:~/gitHubTest/testproject$ git config --global user.name "Fredrik Safstrom"
+fredrik@beaglebone:~/gitHubTest/testproject$ git config --global user.email fredrik@alamorobotics.com
+fredrik@beaglebone:~/gitHubTest/testproject$  git commit --amend --reset-author
+[master 9bf1202] Learning GitHub 1.0
+ 2 files changed, 5 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 FredsFile.txt
+fredrik@beaglebone:~/gitHubTest/testproject$ git status
+On branch master
+nothing to commit, working directory clean
+fredrik@beaglebone:~/gitHubTest/testproject$ git config --global color.ui auto                      fredrik@beaglebone:~/gitHubTest/testproject$ git status
+On branch master
+nothing to commit, working directory clean
+fredrik@beaglebone:~/gitHubTest/testproject$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+fredrik@beaglebone:~/gitHubTest/testproject$ git remote
+fredrik@beaglebone:~/gitHubTest/testproject$ git remote --help
+fredrik@beaglebone:~/gitHubTest/testproject$
+fredrik@beaglebone:~/gitHubTest/testproject$ git remote add github https://github.com
+fredrik@beaglebone:~/gitHubTest/testproject$ git remote
+github
+fredrik@beaglebone:~/gitHubTest/testproject$ git push github
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream github master
+
+fredrik@beaglebone:~/gitHubTest/testproject$
+fredrik@beaglebone:~/gitHubTest/testproject$
+fredrik@beaglebone:~/gitHubTest/testproject$
+fredrik@beaglebone:~/gitHubTest/testproject$ git status
+On branch master
+nothing to commit, working directory clean
+fredrik@beaglebone:~/gitHubTest/testproject$ git remote add testproject https://github.com/alamorobotics/testproject.git
+fredrik@beaglebone:~/gitHubTest/testproject$ git remote
+github
+testproject
+fredrik@beaglebone:~/gitHubTest/testproject$ git push testproject
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream testproject master
+
+fredrik@beaglebone:~/gitHubTest/testproject$ git config --global push.default simple
+fredrik@beaglebone:~/gitHubTest/testproject$ git push testproject
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream testproject master
+
+fredrik@beaglebone:~/gitHubTest/testproject$ git push --set-upstream testproject master
+Username for 'https://github.com': alamorobotics
+Password for 'https://alamorobotics@github.com':
+remote: Repository not found.
+fatal: repository 'https://github.com/alamorobotics/testproject.git/' not found
+fredrik@beaglebone:~/gitHubTest/testproject$ git remote add origin https://github.com/alamorobotics/testproject.git
+fredrik@beaglebone:~/gitHubTest/testproject$ git push -u origin master
+Username for 'https://github.com': alamorobotics
+Password for 'https://alamorobotics@github.com':
+Counting objects: 4, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 310 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/alamorobotics/testproject.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+fredrik@beaglebone:~/gitHubTest/testproject$ ls -l
+total 4
+-rw-r--r-- 1 fredrik fredrik 17 Jul 23 12:16 FredsFile.txt
+-rw-r--r-- 1 fredrik fredrik  0 Jul 23 12:19 do_not_include.o
+-rw-r--r-- 1 fredrik fredrik  0 Jul 23 12:18 dummy.log
+fredrik@beaglebone:~/gitHubTest/testproject$ git branch version_2.0
+fredrik@beaglebone:~/gitHubTest/testproject$ vi FredsFile.txt
+fredrik@beaglebone:~/gitHubTest/testproject$ touch newfile_2.0.txt
+fredrik@beaglebone:~/gitHubTest/testproject$ git add .
+fredrik@beaglebone:~/gitHubTest/testproject$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   FredsFile.txt
+        new file:   newfile_2.0.txt
+
+fredrik@beaglebone:~/gitHubTest/testproject$ git commit
+[master af7c435] Learning more about GitHub...
+ 2 files changed, 3 insertions(+)
+ create mode 100644 newfile_2.0.txt
+fredrik@beaglebone:~/gitHubTest/testproject$ git commit
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+fredrik@beaglebone:~/gitHubTest/testproject$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+fredrik@beaglebone:~/gitHubTest/testproject$ git push
+Username for 'https://github.com': alamorobotics
+Password for 'https://alamorobotics@github.com':
+Counting objects: 4, done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 399 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/alamorobotics/testproject.git
+   9bf1202..af7c435  master -> master
+fredrik@beaglebone:~/gitHubTest/testproject$
+
